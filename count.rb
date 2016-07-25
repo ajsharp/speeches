@@ -21,13 +21,13 @@ speech_files.each do |file|
     result[word.to_sym] = contents.split(/#{word}/i).count
   end
 
-  higher_hillary   = [result[:clinton], result[:hillary]].max
-  higher_president = [result[:obama], result[:president]].max
-  higher_trump     = [result[:trump], result[:father]].max
-  result['hillary + president'] = higher_hillary + higher_president
+  higher_hillary = [result[:clinton], result[:hillary]].max
+  obama          = result[:obama]
+  hillary_obama  = higher_hillary + obama
+  higher_trump   = [result[:trump], result[:father]].max
+  result['hillary + president'] = higher_hillary + obama
   result['hillary / trump'] = higher_hillary.to_f / result[:trump].to_f
-  result['hillary+president / trump'] = result['hillary + president'].to_f / result[:trump]
-  result['']
+  result['hillary+obama / trump'] = hillary_obama.to_f / result[:trump]
 
   results << result
 end
