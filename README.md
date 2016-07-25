@@ -7,7 +7,7 @@ Donald Trump.
 
 ## Results
 
-See results.csv.
+See [results.csv!](results.csv).
 
 ## Methodology
 
